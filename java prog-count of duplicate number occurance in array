@@ -1,0 +1,31 @@
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+public class BreakStatement1 {
+    
+   
+    public static void countduplicateocc(int[] array){
+        Map<Integer,Integer>frequencymap=new HashMap<Integer,Integer>();
+        for (int element:array){
+            frequencymap.put(element,frequencymap.getOrDefault(element,0)+1);
+        }
+        
+        for(Map.Entry<Integer,Integer> entry : frequencymap.entrySet())
+        {
+            if (entry.getValue() > 1){
+                System.out.println(entry.getKey() + " "+entry.getValue());
+                
+                
+            }
+        }
+    }
+
+	public static void main(String[] args) {
+	 //String [] letters={"A","B","C","A","B"};
+    int[] numbers={1,2,3,1,2};
+   // countduplicateocc(letters);
+    countduplicateocc(numbers);
+}
+}
