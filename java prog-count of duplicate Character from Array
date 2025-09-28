@@ -1,0 +1,24 @@
+import java.util.Map;
+import java.util.HashMap;
+import java.util.Map.Entry;
+public class Main
+{
+    //count of duplicate Character from Array
+    public static void duplicatechar(char[] array){
+        HashMap<Character,Integer> frequencymap=new HashMap<Character,Integer>();
+        for(char c:array){
+            frequencymap.put(c,frequencymap.getOrDefault(c,0) + 1);
+        }
+        System.out.println("count of duplicate charaecter occurance");
+        for(Map.Entry<Character,Integer> entry:frequencymap.entrySet()){
+            if (entry.getValue() > 1)
+            System.out.println(entry.getKey()+"  "+entry.getValue());
+        }
+    }
+    
+    
+	public static void main(String[] args) {
+		char [] letter={'A','B','C','A','B','C'};
+		duplicatechar(letter);
+	}
+}
