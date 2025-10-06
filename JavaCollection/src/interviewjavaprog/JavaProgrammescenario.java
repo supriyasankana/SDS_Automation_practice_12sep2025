@@ -1,6 +1,6 @@
 package interviewjavaprog;
 
-public class WiproProg {
+public class JavaProgrammescenario {
 
 	public static void main(String[] args) {
 		/*Find the count of occurrence of letter 'o' also replace it with 't'
@@ -21,5 +21,4 @@ public class WiproProg {
 		System.out.println(count);
 		System.out.println(newstr);
 	}
-
 }
